@@ -1,0 +1,9 @@
+body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cart-container {
+	width: 400px;
+	margin-bottom: 8px;
+	border-bottom: 1px solid black;
+}

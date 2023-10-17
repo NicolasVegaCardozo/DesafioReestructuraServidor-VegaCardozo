@@ -1,0 +1,40 @@
+body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 400px;
+}
+
+.data-container {
+	width: auto;
+	margin-bottom: 8px;
+	border-bottom: 1px solid black;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+button {
+	width: 100px;
+	height: 40px;
+	border: none;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+
+.add-button {
+	width: 120px;
+	height: 40px;
+	border: none;
+	background-color: #28a745;
+	color: #fff;
+	cursor: pointer;
+}
