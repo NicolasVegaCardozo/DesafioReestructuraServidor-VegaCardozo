@@ -1,3 +1,35 @@
+import { Router } from "express";
+import cartController from "../controllers/cart.controller.js";
+
+const cartRouter = Router();
+
+// Crear un nuevo carrito
+cartRouter.post("/", cartController.createCart);
+
+// Obtener todos los carritos
+cartRouter.get("/", cartController.getAllCarts);
+
+// Obtener un carrito específico por su ID
+cartRouter.get("/:cid", cartController.getCartById);
+
+// Agregar un producto a un carrito específico
+cartRouter.post("/:cid/products/:pid", cartController.addProductToCart);
+
+// Actualizar un producto en un carrito específico
+cartRouter.put("/:cid/products/:pid", cartController.updateProductInCart);
+
+// Eliminar un producto de un carrito específico
+cartRouter.delete("/:cid/products/:pid", cartController.removeProductFromCart);
+
+// Vaciar un carrito específico
+cartRouter.delete("/:cid", cartController.clearCart);
+
+export default cartRouter;
+
+
+
+
+
 // import { Router } from "express";
 // import cartModel from "../models/carts.models.js";
 
@@ -162,32 +194,4 @@
 //     }
 // });
 // export default cartRouter;
-
-import { Router } from "express";
-import cartController from "../controllers/cart.controller.js";
-
-const cartRouter = Router();
-
-// Crear un nuevo carrito
-cartRouter.post("/", cartController.createCart);
-
-// Obtener todos los carritos
-cartRouter.get("/", cartController.getAllCarts);
-
-// Obtener un carrito específico por su ID
-cartRouter.get("/:cid", cartController.getCartById);
-
-// Agregar un producto a un carrito específico
-cartRouter.post("/:cid/products/:pid", cartController.addProductToCart);
-
-// Actualizar un producto en un carrito específico
-cartRouter.put("/:cid/products/:pid", cartController.updateProductInCart);
-
-// Eliminar un producto de un carrito específico
-cartRouter.delete("/:cid/products/:pid", cartController.removeProductFromCart);
-
-// Vaciar un carrito específico
-cartRouter.delete("/:cid", cartController.clearCart);
-
-export default cartRouter;
 
